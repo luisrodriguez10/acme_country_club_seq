@@ -38,10 +38,10 @@ Member.belongsTo(Member, { as: "sponsor" });
 Member.hasMany(Member, { foreignKey: 'sponsorId',as: "sponsored" });
 
 Booking.belongsTo(Member, { as: "booker" });
-Member.hasMany(Booking, { foreignKey: "bookerId" });
+// Member.hasMany(Booking, { foreignKey: "bookerId" });
 
 Booking.belongsTo(Facility);
-Facility.hasMany(Booking);
+// Facility.hasMany(Booking);
 
 const seeder = async () => {
   await conn.sync({ force: true });
